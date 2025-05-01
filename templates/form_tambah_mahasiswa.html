@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tambah Mahasiswa</title>
+</head>
+<body>
+    <h2>Form Tambah Mahasiswa</h2>
+    <form method="POST">
+        <label>Nama:</label><br>
+        <input type="text" name="nama" required><br><br>
+        <label>NPM:</label><br>
+        <input type="text" name="npm" required><br><br>
+        <label>Jurusan:</label><br>
+        <input type="text" name="jurusan" required><br><br>
+        <button type="submit">Tambah Mahasiswa</button>
+    </form>
+    <br>
+    <a href="{{ url_for('daftar_mahasiswa') }}">Kembali ke Daftar Mahasiswa</a>
+</body>
+</html>

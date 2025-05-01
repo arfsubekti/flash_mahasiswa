@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Daftar Mahasiswa</title>
+</head>
+<body>
+    <h2>Daftar Mahasiswa</h2>
+    <a href="{{ url_for('form_tambah_mahasiswa') }}">Tambah Mahasiswa Baru</a><br><br>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nama</th>
+                <th>NPM</th>
+                <th>Jurusan</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for mhs in mahasiswa %}
+            <tr>
+                <td>{{ mhs.id }}</td>
+                <td>{{ mhs.nama }}</td>
+                <td>{{ mhs.npm }}</td>
+                <td>{{ mhs.jurusan }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
